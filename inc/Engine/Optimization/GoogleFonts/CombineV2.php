@@ -48,7 +48,7 @@ class CombineV2 extends AbstractOptimization {
 	 * @return string
 	 */
 	public function optimize( string $html ): string {
-		//Logger::info( 'GOOGLE FONTS COMBINE-V2 PROCESS STARTED.', [ 'GF combine process' ] );
+		//Logger:info( 'GOOGLE FONTS COMBINE-V2 PROCESS STARTED.', [ 'GF combine process' ] );
 
 		$html_nocomments = $this->hide_comments( $html );
 		$font_tags   = $this->find( '<link(?:\s+(?:(?!href\s*=\s*)[^>])+)?(?:\s+href\s*=\s*([\'"])(?<url>(?:https?:)?\/\/fonts\.googleapis\.com\/css2(?:(?!\1).)+)\1)(?:\s+[^>]*)?>', $html_nocomments );
@@ -104,7 +104,7 @@ class CombineV2 extends AbstractOptimization {
 	 *
 	 * @since  3.8
 	 *
-	 * @param array $url A Google Font v2 url.
+	 * @param string $url A Google Font v2 url.
 	 *
 	 * @return void
 	 */
